@@ -6,7 +6,7 @@ const App = props => {
   return (
     <div className="App">
       <header>
-        Hello
+    
       </header>
     </div>
   );
