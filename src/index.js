@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import Blog from './Component/Blog/Blog'
 import * as serviceWorker from './serviceWorker';
-import { HashRouter } from 'react-router-dom'
+
 import FooterButton from './Component/FooterButton'
 import Bid from './Component/Bid/Bid'
 import {
     BrowserRouter as Router,
     Switch,
+    HashRouter,
     Route, Link
   } from 'react-router-dom'
 import Login from './Component/Blog/Login'
