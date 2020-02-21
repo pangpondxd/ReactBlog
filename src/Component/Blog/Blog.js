@@ -14,7 +14,7 @@ import Footer from './Footer';
 import post1 from './blog-post.1.md';
 import post2 from './blog-post.2.md';
 import post3 from './blog-post.3.md';
-import Route from 'react-router-dom'
+import Link from '@material-ui/core/Link';
 const useStyles = makeStyles(theme => ({
   mainGrid: {
     marginTop: theme.spacing(3),
@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const sections = [
-  { title: 'Technology', url: '#' },
+  { title: 'Edit Profile', url: '/bid' },
   { title: 'Design', url: '#' },
   { title: 'Culture', url: '#' },
   { title: 'Business', url: '#' },

@@ -2,22 +2,28 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-
+import Link from '@material-ui/core/Link';
+import imageStatic from '../static/Garden.jpg'
+import { red } from '@material-ui/core/colors';
 const images = [
   {
-    url: '/static/images/grid-list/breakfast.jpg',
-    title: 'Breakfast',
+    url: './static/1.jpg',
+    title: 'Blog',
     width: '40%',
+    height: '100%',
+    href: '/blog'
   },
   {
-    url: '/static/images/grid-list/burgers.jpg',
-    title: 'Burgers',
+    url: './static/2.jpg',
+    title: 'Coming Soon 1 ',
     width: '30%',
+    href: '#'
   },
   {
-    url: '/static/images/grid-list/camera.jpg',
-    title: 'Camera',
+    url: '',
+    title: 'Coming Soon 2',
     width: '30%',
+    href: '#'
   },
 ];
 
@@ -30,7 +36,7 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     position: 'relative',
-    height: 200,
+    height: 720,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
       height: 100,
@@ -104,6 +110,7 @@ export default function ButtonBases() {
           focusRipple
           key={image.title}
           className={classes.image}
+          href={image.href}
           focusVisibleClassName={classes.focusVisible}
           style={{
             width: image.width,
@@ -112,9 +119,13 @@ export default function ButtonBases() {
           <span
             className={classes.imageSrc}
             style={{
-              backgroundImage: `url(${image.url})`,
+              // backgroundImage : `url(${image.url})`,
+              backgroundColor: 'pink',
+              
             }}
+            
           />
+          <h1>{image.url}</h1>
           <span className={classes.imageBackdrop} />
           <span className={classes.imageButton}>
             <Typography

@@ -5,6 +5,8 @@ import App from './App';
 import Blog from './Component/Blog/Blog'
 import * as serviceWorker from './serviceWorker';
 import { HashRouter } from 'react-router-dom'
+import FooterButton from './Component/FooterButton'
+import Bid from './Component/Bid/Bid'
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,15 +16,20 @@ import Login from './Component/Blog/Login'
 const AppWithRouter = () => (
     <HashRouter>
         <Router>
-        <Link exact to="/"></Link>
-        <Link  to="/blog"></Link>
+        <Route exact path="/">
+          <FooterButton />
+        </Route>
         <Switch>
-        <Router path="/login">
+        <Route path="/login">
           <Login />
-        </Router>
-        <Router path="/">
+        </Route>
+        <Route path="/blog">
           <Blog />
-        </Router>
+          </Route>
+          <Route path="/bid">
+            <Bid />
+        </Route>
+      
       </Switch>
        </Router>
     </HashRouter>
